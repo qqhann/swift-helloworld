@@ -15,6 +15,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func firstButton(_ sender: Any) {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd  HH:mm:ss"
+        let result = formatter.string(from: date)
+        firstTextarea.text = "Changed " + result
+    }
+    
+    @IBOutlet weak var firstTextarea: UITextField!
 }
 
